@@ -1,0 +1,276 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8AE07F416FCD07B00E00984 /* TBSpectacularPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AE07F316FCD07B00E00984 /* TBSpectacularPlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F8AE07D916FCCEE500E00984 /* spectacular.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spectacular.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8AE07DF16FCCEE500E00984 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F8AE07E116FCCEE500E00984 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F8AE07E416FCCEE500E00984 /* spectacular-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "spectacular-Info.plist"; sourceTree = "<group>"; };
+		F8AE07E816FCCEE500E00984 /* spectacular-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "spectacular-Prefix.pch"; sourceTree = "<group>"; };
+		F8AE07F216FCD07B00E00984 /* TBSpectacularPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBSpectacularPlugin.h; sourceTree = "<group>"; };
+		F8AE07F316FCD07B00E00984 /* TBSpectacularPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSpectacularPlugin.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8AE07D616FCCEE500E00984 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8AE07D016FCCEE500E00984 = {
+			isa = PBXGroup;
+			children = (
+				F8AE07E216FCCEE500E00984 /* spectacular */,
+				F8AE07DB16FCCEE500E00984 /* Frameworks */,
+				F8AE07DA16FCCEE500E00984 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8AE07DA16FCCEE500E00984 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8AE07D916FCCEE500E00984 /* spectacular.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8AE07DB16FCCEE500E00984 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8AE07DE16FCCEE500E00984 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8AE07DE16FCCEE500E00984 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8AE07DF16FCCEE500E00984 /* AppKit.framework */,
+				F8AE07E116FCCEE500E00984 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F8AE07E216FCCEE500E00984 /* spectacular */ = {
+			isa = PBXGroup;
+			children = (
+				F8AE07E316FCCEE500E00984 /* Supporting Files */,
+				F8AE07F116FCD01B00E00984 /* Classes */,
+			);
+			path = spectacular;
+			sourceTree = "<group>";
+		};
+		F8AE07E316FCCEE500E00984 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8AE07E416FCCEE500E00984 /* spectacular-Info.plist */,
+				F8AE07E816FCCEE500E00984 /* spectacular-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8AE07F116FCD01B00E00984 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F8AE07F216FCD07B00E00984 /* TBSpectacularPlugin.h */,
+				F8AE07F316FCD07B00E00984 /* TBSpectacularPlugin.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8AE07D816FCCEE500E00984 /* spectacular */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8AE07EB16FCCEE500E00984 /* Build configuration list for PBXNativeTarget "spectacular" */;
+			buildPhases = (
+				F8AE07D516FCCEE500E00984 /* Sources */,
+				F8AE07D616FCCEE500E00984 /* Frameworks */,
+				F8AE07D716FCCEE500E00984 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = spectacular;
+			productName = spectacular;
+			productReference = F8AE07D916FCCEE500E00984 /* spectacular.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8AE07D116FCCEE500E00984 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = thoughtbot;
+			};
+			buildConfigurationList = F8AE07D416FCCEE500E00984 /* Build configuration list for PBXProject "spectacular" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F8AE07D016FCCEE500E00984;
+			productRefGroup = F8AE07DA16FCCEE500E00984 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8AE07D816FCCEE500E00984 /* spectacular */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8AE07D716FCCEE500E00984 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8AE07D516FCCEE500E00984 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8AE07F416FCD07B00E00984 /* TBSpectacularPlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F8AE07E916FCCEE500E00984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F8AE07EA16FCCEE500E00984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F8AE07EC16FCCEE500E00984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "spectacular/spectacular-Prefix.pch";
+				INFOPLIST_FILE = "spectacular/spectacular-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		F8AE07ED16FCCEE500E00984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "spectacular/spectacular-Prefix.pch";
+				INFOPLIST_FILE = "spectacular/spectacular-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8AE07D416FCCEE500E00984 /* Build configuration list for PBXProject "spectacular" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8AE07E916FCCEE500E00984 /* Debug */,
+				F8AE07EA16FCCEE500E00984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8AE07EB16FCCEE500E00984 /* Build configuration list for PBXNativeTarget "spectacular" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8AE07EC16FCCEE500E00984 /* Debug */,
+				F8AE07ED16FCCEE500E00984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8AE07D116FCCEE500E00984 /* Project object */;
+}
