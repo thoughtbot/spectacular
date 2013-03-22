@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8AA211716FCDA57001CAD9A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AE07DF16FCCEE500E00984 /* AppKit.framework */; };
 		F8AE07F416FCD07B00E00984 /* TBSpectacularPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AE07F316FCD07B00E00984 /* TBSpectacularPlugin.m */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8AA211716FCDA57001CAD9A /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
