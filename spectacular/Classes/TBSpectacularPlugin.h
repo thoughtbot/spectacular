@@ -6,8 +6,12 @@
 //  Copyright (c) 2013 thoughtbot. All rights reserved.
 //
 
-#import <AppKit/AppKit.h>
+@class IDEIndex;
 
 @interface TBSpectacularPlugin : NSObject
+
+@property (nonatomic, strong) IDEIndex *currentIndex;
+
++ (TBSpectacularPlugin *)sharedPlugin;
 
 @end
