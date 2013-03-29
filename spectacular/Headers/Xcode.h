@@ -17,6 +17,7 @@
 
 @interface IDEIndexCollection : NSObject
 
+- (id)firstObject;
 - (id)allObjects;
 
 @end

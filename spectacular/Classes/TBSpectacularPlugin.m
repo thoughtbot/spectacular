@@ -84,7 +84,7 @@ static TBSpectacularPlugin *spectacularPlugin = nil;
     NSString *specFileName = [NSString stringWithFormat:@"%@spec.m", [self activeFileName]];
     IDEIndexCollection *indexCollection = [self.currentIndex filesContaining:specFileName anchorStart:NO anchorEnd:YES subsequence:NO ignoreCase:YES cancelWhen:nil];
 
-    NSLog(@"%@", [indexCollection allObjects]);
+    NSLog(@"%@", [indexCollection firstObject]);
 }
 
 - (IDEEditorHistoryItem *)activeHistoryItem
