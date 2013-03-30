@@ -14,16 +14,12 @@
 
 - (NSString *)tb_counterpartName
 {
-    NSString *counterpartFileName;
     NSString *activeFileName = [self _tb_baseFileName];
 
-    if ([self tb_isSpecFile]) {
-        counterpartFileName = [activeFileName stringByReplacingOccurrencesOfString:@"Spec" withString:@".m"];
-    } else {
-        counterpartFileName = [NSString stringWithFormat:@"%@Spec.m", activeFileName];
-    }
-
-    return counterpartFileName;
+    if ([self tb_isSpecFile])
+        return [activeFileName stringByReplacingOccurrencesOfString:@"Spec" withString:@".m"];
+    else
+        return [NSString stringWithFormat:@"%@Spec.m", activeFileName];
 }
 
 - (BOOL)tb_isSpecFile

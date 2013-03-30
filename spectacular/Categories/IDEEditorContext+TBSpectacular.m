@@ -15,7 +15,7 @@
 - (void)tb_jumpToTestOrCounterpart
 {
     NSString *counterpartFileName = [[self currentHistoryItem] tb_counterpartName];
-    DVTFilePath *counterpartFilePath = [[[self workspace] index] tb_counterpartWithFileName:counterpartFileName];
+    DVTFilePath *counterpartFilePath = [[[self workspace] index] tb_filePathForFileWithName:counterpartFileName];
 
     if (counterpartFilePath)
     {

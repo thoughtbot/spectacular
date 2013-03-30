@@ -10,9 +10,9 @@
 
 @implementation IDEIndex (TBSpectacular)
 
-- (DVTFilePath *)tb_counterpartWithFileName:(NSString *)counterpartFileName
+- (DVTFilePath *)tb_filePathForFileWithName:(NSString *)fileName
 {
-    IDEIndexCollection *indexCollection = [self filesContaining:counterpartFileName anchorStart:NO anchorEnd:YES subsequence:NO ignoreCase:YES cancelWhen:nil];
+    IDEIndexCollection *indexCollection = [self filesContaining:fileName anchorStart:NO anchorEnd:YES subsequence:NO ignoreCase:YES cancelWhen:nil];
     return [indexCollection firstObject];
 }
 

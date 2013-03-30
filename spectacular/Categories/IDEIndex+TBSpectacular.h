@@ -10,6 +10,6 @@
 
 @interface IDEIndex (TBSpectacular)
 
-- (DVTFilePath *)tb_counterpartWithFileName:(NSString *)counterpartFileName;
+- (DVTFilePath *)tb_filePathForFileWithName:(NSString *)fileName;
 
 @end
