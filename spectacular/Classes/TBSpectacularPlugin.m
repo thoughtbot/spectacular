@@ -7,6 +7,7 @@
 //
 
 #import "TBSpectacularPlugin.h"
+#import "IDEEditorContext+TBSpectacular.h"
 #import "Xcode.h"
 
 @interface TBSpectacularPlugin ()
@@ -42,23 +43,19 @@ static TBSpectacularPlugin *spectacularPlugin = nil;
     self = [super init];
     if (!self) return nil;
 
-    [self registerForNotifications];
+    [self setupMenuItem];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateActiveEditorContext:) name:@"IDEEditorAreaLastActiveEditorContextDidChangeNotification" object:nil];
 
     return self;
 }
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super dealloc];
+}
+
 #pragma mark - Private methods
-
-- (void)applicationDidFinishLaunching:(NSNotification *)notification
-{
-    [self setupMenuItem];
-}
-
-- (void)registerForNotifications
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateActiveEditorContext:) name:@"IDEEditorAreaLastActiveEditorContextDidChangeNotification" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidFinishLaunching:) name:NSApplicationDidFinishLaunchingNotification object:nil];
-}
 
 - (void)updateActiveEditorContext:(NSNotification *)notification
 {
@@ -72,44 +69,15 @@ static TBSpectacularPlugin *spectacularPlugin = nil;
     NSMenu *mainMenu = [NSApp mainMenu];
     NSMenuItem *editMenu = [mainMenu itemWithTitle:@"Edit"];
     [[editMenu submenu] addItem:[NSMenuItem separatorItem]];
-    self.specMenuItem = [[NSMenuItem alloc] initWithTitle:@"Jump to test file" action:@selector(jumpToSpec) keyEquivalent:@"t"];
+    self.specMenuItem = [[NSMenuItem alloc] initWithTitle:@"Jump to Spec File" action:@selector(toggleSpecFile) keyEquivalent:@"t"];
     [self.specMenuItem setKeyEquivalentModifierMask:NSControlKeyMask | NSAlternateKeyMask | NSCommandKeyMask];
     [self.specMenuItem setTarget:self];
     [[editMenu submenu] addItem:self.specMenuItem];
 }
 
-- (void)jumpToSpec
+- (void)toggleSpecFile
 {
-    NSString *counterpartFileName;
-
-    if ([[self activeFileName] hasSuffix:@"Spec"]) {
-        counterpartFileName = [[self activeFileName] stringByReplacingOccurrencesOfString:@"Spec" withString:@".m"];
-    } else {
-        counterpartFileName = [NSString stringWithFormat:@"%@spec.m", [self activeFileName]];
-    }
-
-    IDEIndex *currentIndex = [[self.currentEditorContext workspace] index];
-    IDEIndexCollection *indexCollection = [currentIndex filesContaining:counterpartFileName anchorStart:NO anchorEnd:YES subsequence:NO ignoreCase:YES cancelWhen:nil];
-    DVTFilePath *specFilePath = [indexCollection firstObject];
-
-    if (specFilePath)
-    {
-        IDENavigableItemCoordinator *navigableCoordinator = self.currentEditorContext.navigableItemCoordinator;
-        IDENavigableItem *navigableItem = [navigableCoordinator structureNavigableItemForDocumentURL:[specFilePath fileURL] inWorkspace:[self.currentEditorContext workspace] error:nil];
-
-        self.currentEditorContext.navigableItem = navigableItem;
-    }
-}
-
-- (IDEEditorHistoryItem *)activeHistoryItem
-{
-    return [self.currentEditorContext currentHistoryItem];
-}
-
-- (NSString *)activeFileName
-{
-    NSURL *currentURL = [[self activeHistoryItem] documentURL];
-    return [[currentURL lastPathComponent] stringByDeletingPathExtension];
+    [self.currentEditorContext tb_jumpToTestOrCounterpart];
 }
 
 #pragma mark - Menu Item validation

@@ -7,30 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F810FC9716FD5B8B00F462D2 /* Example.m in Sources */ = {isa = PBXBuildFile; fileRef = F810FC9616FD5B8B00F462D2 /* Example.m */; };
-		F8324C2216FD394E00AB1599 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = F860537616FD348F0003ABA9 /* JRSwizzle.m */; };
 		F84458AE16FD283A006621A8 /* IDEFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84458AC16FD283A006621A8 /* IDEFoundation.framework */; };
 		F84458AF16FD283A006621A8 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84458AD16FD283A006621A8 /* IDEKit.framework */; };
-		F85D214B1705CD25009B994B /* IDEEditor+Spectacular.m in Sources */ = {isa = PBXBuildFile; fileRef = F85D214A1705CD25009B994B /* IDEEditor+Spectacular.m */; };
-		F860537A16FD35CD0003ABA9 /* IDEWorkspace+Spectacular.m in Sources */ = {isa = PBXBuildFile; fileRef = F860537916FD35CD0003ABA9 /* IDEWorkspace+Spectacular.m */; };
+		F85D927117068D2D008A321D /* IDEEditorContext+TBSpectacular.m in Sources */ = {isa = PBXBuildFile; fileRef = F85D927017068D2D008A321D /* IDEEditorContext+TBSpectacular.m */; };
 		F8AA211716FCDA57001CAD9A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AE07DF16FCCEE500E00984 /* AppKit.framework */; };
 		F8AE07F416FCD07B00E00984 /* TBSpectacularPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AE07F316FCD07B00E00984 /* TBSpectacularPlugin.m */; };
-		F8C9983816FD3AAA00A6104F /* ExampleSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C9983716FD3AAA00A6104F /* ExampleSpec.m */; };
+		F8F6F4D317069472002B2856 /* IDEEditorHistoryItem+TBSpectacular.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F6F4D217069472002B2856 /* IDEEditorHistoryItem+TBSpectacular.m */; };
+		F8F6F4D617069724002B2856 /* IDEIndex+TBSpectacular.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F6F4D517069724002B2856 /* IDEIndex+TBSpectacular.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F810FC9516FD5B8B00F462D2 /* Example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example.h; sourceTree = "<group>"; };
-		F810FC9616FD5B8B00F462D2 /* Example.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example.m; sourceTree = "<group>"; };
 		F81E86D316FD267700F94279 /* Xcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xcode.h; sourceTree = "<group>"; };
 		F84458AC16FD283A006621A8 /* IDEFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEFoundation.framework; path = /Applications/Xcode.app/Contents/Frameworks/IDEFoundation.framework; sourceTree = "<absolute>"; };
 		F84458AD16FD283A006621A8 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEKit.framework; path = /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework; sourceTree = "<absolute>"; };
-		F85D21491705CD25009B994B /* IDEEditor+Spectacular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDEEditor+Spectacular.h"; sourceTree = "<group>"; };
-		F85D214A1705CD25009B994B /* IDEEditor+Spectacular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDEEditor+Spectacular.m"; sourceTree = "<group>"; };
-		F860537516FD348F0003ABA9 /* JRSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
-		F860537616FD348F0003ABA9 /* JRSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
-		F860537816FD35CD0003ABA9 /* IDEWorkspace+Spectacular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDEWorkspace+Spectacular.h"; sourceTree = "<group>"; };
-		F860537916FD35CD0003ABA9 /* IDEWorkspace+Spectacular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDEWorkspace+Spectacular.m"; sourceTree = "<group>"; };
-		F8943328170658010014DB2C /* IDESourceEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDESourceEditor.h; sourceTree = "<group>"; };
+		F85D926F17068D2D008A321D /* IDEEditorContext+TBSpectacular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDEEditorContext+TBSpectacular.h"; sourceTree = "<group>"; };
+		F85D927017068D2D008A321D /* IDEEditorContext+TBSpectacular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDEEditorContext+TBSpectacular.m"; sourceTree = "<group>"; };
 		F8AE07D916FCCEE500E00984 /* spectacular.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spectacular.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AE07DF16FCCEE500E00984 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		F8AE07E116FCCEE500E00984 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,12 +29,10 @@
 		F8AE07E816FCCEE500E00984 /* spectacular-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "spectacular-Prefix.pch"; sourceTree = "<group>"; };
 		F8AE07F216FCD07B00E00984 /* TBSpectacularPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBSpectacularPlugin.h; sourceTree = "<group>"; };
 		F8AE07F316FCD07B00E00984 /* TBSpectacularPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSpectacularPlugin.m; sourceTree = "<group>"; };
-		F8C9983616FD3AAA00A6104F /* ExampleSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleSpec.h; sourceTree = "<group>"; };
-		F8C9983716FD3AAA00A6104F /* ExampleSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleSpec.m; sourceTree = "<group>"; };
-		F8E5C21916FCFFBA00104C01 /* IDEKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEKit.h; sourceTree = "<group>"; };
-		F8E5C21A16FD000000104C01 /* IDEFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDEFoundation.h; sourceTree = "<group>"; };
-		F8E5C21B16FD007E00104C01 /* DVTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTKit.h; sourceTree = "<group>"; };
-		F8E5C21C16FD00BF00104C01 /* DVTFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVTFoundation.h; sourceTree = "<group>"; };
+		F8F6F4D117069472002B2856 /* IDEEditorHistoryItem+TBSpectacular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDEEditorHistoryItem+TBSpectacular.h"; sourceTree = "<group>"; };
+		F8F6F4D217069472002B2856 /* IDEEditorHistoryItem+TBSpectacular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDEEditorHistoryItem+TBSpectacular.m"; sourceTree = "<group>"; };
+		F8F6F4D417069724002B2856 /* IDEIndex+TBSpectacular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDEIndex+TBSpectacular.h"; sourceTree = "<group>"; };
+		F8F6F4D517069724002B2856 /* IDEIndex+TBSpectacular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDEIndex+TBSpectacular.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,22 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F860537416FD347B0003ABA9 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				F860537516FD348F0003ABA9 /* JRSwizzle.h */,
-				F860537616FD348F0003ABA9 /* JRSwizzle.m */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		F860537716FD34D70003ABA9 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				F860537816FD35CD0003ABA9 /* IDEWorkspace+Spectacular.h */,
-				F860537916FD35CD0003ABA9 /* IDEWorkspace+Spectacular.m */,
-				F85D21491705CD25009B994B /* IDEEditor+Spectacular.h */,
-				F85D214A1705CD25009B994B /* IDEEditor+Spectacular.m */,
+				F8F6F4D117069472002B2856 /* IDEEditorHistoryItem+TBSpectacular.h */,
+				F8F6F4D217069472002B2856 /* IDEEditorHistoryItem+TBSpectacular.m */,
+				F85D926F17068D2D008A321D /* IDEEditorContext+TBSpectacular.h */,
+				F85D927017068D2D008A321D /* IDEEditorContext+TBSpectacular.m */,
+				F8F6F4D417069724002B2856 /* IDEIndex+TBSpectacular.h */,
+				F8F6F4D517069724002B2856 /* IDEIndex+TBSpectacular.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -83,12 +65,7 @@
 		F871EEF716FCF1FD00923E14 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				F8E5C21916FCFFBA00104C01 /* IDEKit.h */,
-				F8E5C21A16FD000000104C01 /* IDEFoundation.h */,
-				F8E5C21B16FD007E00104C01 /* DVTKit.h */,
-				F8E5C21C16FD00BF00104C01 /* DVTFoundation.h */,
 				F81E86D316FD267700F94279 /* Xcode.h */,
-				F8943328170658010014DB2C /* IDESourceEditor.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -133,14 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				F860537716FD34D70003ABA9 /* Categories */,
-				F860537416FD347B0003ABA9 /* Helpers */,
 				F871EEF716FCF1FD00923E14 /* Headers */,
 				F8AE07E316FCCEE500E00984 /* Supporting Files */,
 				F8AE07F116FCD01B00E00984 /* Classes */,
-				F8C9983616FD3AAA00A6104F /* ExampleSpec.h */,
-				F8C9983716FD3AAA00A6104F /* ExampleSpec.m */,
-				F810FC9516FD5B8B00F462D2 /* Example.h */,
-				F810FC9616FD5B8B00F462D2 /* Example.m */,
 			);
 			path = spectacular;
 			sourceTree = "<group>";
@@ -225,11 +197,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8AE07F416FCD07B00E00984 /* TBSpectacularPlugin.m in Sources */,
-				F860537A16FD35CD0003ABA9 /* IDEWorkspace+Spectacular.m in Sources */,
-				F8324C2216FD394E00AB1599 /* JRSwizzle.m in Sources */,
-				F8C9983816FD3AAA00A6104F /* ExampleSpec.m in Sources */,
-				F810FC9716FD5B8B00F462D2 /* Example.m in Sources */,
-				F85D214B1705CD25009B994B /* IDEEditor+Spectacular.m in Sources */,
+				F85D927117068D2D008A321D /* IDEEditorContext+TBSpectacular.m in Sources */,
+				F8F6F4D317069472002B2856 /* IDEEditorHistoryItem+TBSpectacular.m in Sources */,
+				F8F6F4D617069724002B2856 /* IDEIndex+TBSpectacular.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +273,8 @@
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Frameworks\"",
 				);
-				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				"GCC_ENABLE_OBJC_GC[arch=x86_64]" = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "spectacular/spectacular-Prefix.pch";
 				INFOPLIST_FILE = "spectacular/spectacular-Info.plist";
@@ -323,7 +294,8 @@
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Frameworks\"",
 				);
-				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				"GCC_ENABLE_OBJC_GC[arch=x86_64]" = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "spectacular/spectacular-Prefix.pch";
 				INFOPLIST_FILE = "spectacular/spectacular-Info.plist";
