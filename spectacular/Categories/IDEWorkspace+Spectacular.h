@@ -8,6 +8,6 @@
 
 #import "Xcode.h"
 
-@interface IDEWorkspace (Spectacular)
-
-@end
+//@interface IDEWorkspace (Spectacular)
+//
+//@end

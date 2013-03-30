@@ -12,7 +12,6 @@
 @interface TBSpectacularPlugin ()
 
 @property (nonatomic, strong) NSMenuItem *specMenuItem;
-@property (nonatomic, strong) NSMutableArray *loggedNotifications;
 @property (nonatomic, strong) IDEEditorContext *currentEditorContext;
 
 @end
@@ -50,6 +49,16 @@ static TBSpectacularPlugin *spectacularPlugin = nil;
 
 #pragma mark - Private methods
 
+- (void)notificationPosted:(NSNotification *)notification
+{
+    if (([[notification name] length] >= 2 && [[[notification name] substringWithRange:NSMakeRange(0, 2)] isEqualToString:@"NS"]) || [[notification name] hasSuffix:@"UpdateLocalStatusNotification"]) {
+        return;
+    }
+
+    NSLog(@"      Notification name: %@", [notification name]);
+    NSLog(@"      Notification: %@", notification);
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
     [self setupMenuItem];
@@ -57,13 +66,22 @@ static TBSpectacularPlugin *spectacularPlugin = nil;
 
 - (void)registerForNotifications
 {
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationPosted:) name:nil object:nil];
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateActiveEditorContext:) name:@"IDEEditorAreaLastActiveEditorContextDidChangeNotification" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidFinishLaunching:) name:NSApplicationDidFinishLaunchingNotification object:nil];
 }
 
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+//    NSString *documentPath = [[[object document] fileURL] path];
+//    NSLog(@"                %@", documentPath);
+//}
+
 - (void)updateActiveEditorContext:(NSNotification *)notification
 {
+    NSLog(@"spectaular: Editor context changed: %@", [notification userInfo][@"IDEEditorContext"]);
     self.currentEditorContext = [notification userInfo][@"IDEEditorContext"];
+    NSLog(@"spectacular: Currently active item: %@", [self activeFileName]);
 }
 
 - (void)setupMenuItem
@@ -82,9 +100,17 @@ static TBSpectacularPlugin *spectacularPlugin = nil;
 - (void)jumpToSpec
 {
     NSString *specFileName = [NSString stringWithFormat:@"%@spec.m", [self activeFileName]];
-    IDEIndexCollection *indexCollection = [self.currentIndex filesContaining:specFileName anchorStart:NO anchorEnd:YES subsequence:NO ignoreCase:YES cancelWhen:nil];
+    IDEIndex *currentIndex = [[self.currentEditorContext workspace] index];
+    IDEIndexCollection *indexCollection = [currentIndex filesContaining:specFileName anchorStart:NO anchorEnd:YES subsequence:NO ignoreCase:YES cancelWhen:nil];
+    DVTFilePath *specFilePath = [indexCollection firstObject];
 
-    NSLog(@"%@", [indexCollection firstObject]);
+    if (specFilePath)
+    {
+        IDENavigableItemCoordinator *navigableCoordinator = self.currentEditorContext.navigableItemCoordinator;
+        IDENavigableItem *navigableItem = [navigableCoordinator structureNavigableItemForDocumentURL:[specFilePath fileURL] inWorkspace:[self.currentEditorContext workspace] error:nil];
+
+        self.currentEditorContext.navigableItem = navigableItem;
+    }
 }
 
 - (IDEEditorHistoryItem *)activeHistoryItem

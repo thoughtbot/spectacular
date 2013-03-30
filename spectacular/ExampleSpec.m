@@ -10,4 +10,9 @@
 
 @implementation ExampleSpec
 
+- (void)helloWorld
+{
+    
+}
+
 @end
