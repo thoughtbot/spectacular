@@ -99,9 +99,18 @@ static TBSpectacularPlugin *spectacularPlugin = nil;
 
 - (void)jumpToSpec
 {
-    NSString *specFileName = [NSString stringWithFormat:@"%@spec.m", [self activeFileName]];
+    NSString *counterpartFileName;
+
+    if ([[self activeFileName] hasSuffix:@"Spec"]) {
+        counterpartFileName = [[self activeFileName] stringByReplacingOccurrencesOfString:@"Spec" withString:@".m"];
+    } else {
+        counterpartFileName = [NSString stringWithFormat:@"%@spec.m", [self activeFileName]];
+    }
+
+    NSLog(@"spectacular: %@", counterpartFileName);
+
     IDEIndex *currentIndex = [[self.currentEditorContext workspace] index];
-    IDEIndexCollection *indexCollection = [currentIndex filesContaining:specFileName anchorStart:NO anchorEnd:YES subsequence:NO ignoreCase:YES cancelWhen:nil];
+    IDEIndexCollection *indexCollection = [currentIndex filesContaining:counterpartFileName anchorStart:NO anchorEnd:YES subsequence:NO ignoreCase:YES cancelWhen:nil];
     DVTFilePath *specFilePath = [indexCollection firstObject];
 
     if (specFilePath)
