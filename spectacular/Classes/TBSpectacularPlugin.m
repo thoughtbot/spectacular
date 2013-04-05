@@ -69,7 +69,7 @@ static TBSpectacularPlugin *spectacularPlugin = nil;
     NSMenu *mainMenu = [NSApp mainMenu];
     NSMenuItem *editMenu = [mainMenu itemWithTitle:@"Edit"];
     [[editMenu submenu] addItem:[NSMenuItem separatorItem]];
-    self.specMenuItem = [[NSMenuItem alloc] initWithTitle:@"Jump to test file" action:@selector(toggleSpecFile) keyEquivalent:@"t"];
+    self.specMenuItem = [[NSMenuItem alloc] initWithTitle:@"Jump to Spec File" action:@selector(toggleSpecFile) keyEquivalent:@"t"];
     [self.specMenuItem setKeyEquivalentModifierMask:NSControlKeyMask | NSAlternateKeyMask | NSCommandKeyMask];
     [self.specMenuItem setTarget:self];
     [[editMenu submenu] addItem:self.specMenuItem];
