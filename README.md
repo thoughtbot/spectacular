@@ -2,18 +2,9 @@
 
 ## Installation:
 
- 1. Download the source:
-
-    `$ git clone git@github.com:thoughtbot/spectacular.git`
-
-2. Move into the directory
-
-    `$ cd spectacular`
-
-3. Install the plugin by building with `xcodebuild`
-
-    `$ xcodebuild`
-
+1. Download the source: `$ git clone git@github.com:thoughtbot/spectacular.git`
+2. Move into the directory: `$ cd spectacular`
+3. Install the plugin: `$ xcodebuild`
 4. Restart Xcode
 
 The plugin should now be loaded into the plugin directory
