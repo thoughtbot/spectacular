@@ -24,3 +24,15 @@ habits.
 
 Spectacular is also able to do the reverse lookup, so if you're already in
 `FooSpec.m`, hitting the keyboard shortcut will jump to `Foo.m`.
+
+## About
+
+The spectacular Xcode plugin is written and maintained by [thoughtbot, inc](http://thoughtbot.com/).
+
+![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
+
+The names and logos for thoughtbot are trademarks of thoughtbot, inc.
+
+## License
+
+Liftoff is Copyright (c) 2012-2013 thoughtbot, inc. It is free software, and may be redistributed under the terms specified in the LICENSE file.
