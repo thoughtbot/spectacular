@@ -14,8 +14,14 @@
 
 - (void)tb_jumpToTestOrCounterpart
 {
-    NSString *counterpartFileName = [[self currentHistoryItem] tb_counterpartName];
+    NSString *counterpartFileName = [[self currentHistoryItem] tb_counterpartName:NO];
     DVTFilePath *counterpartFilePath = [[[self workspace] index] tb_filePathForFileWithName:counterpartFileName];
+
+    // what if curent item is a category  for class? We can try to find Spec for its class.
+    if (!counterpartFilePath && ![[self currentHistoryItem] tb_isSpecFile]) {
+        counterpartFileName = [[self currentHistoryItem] tb_counterpartName:YES];
+        counterpartFilePath = [[[self workspace] index] tb_filePathForFileWithName:counterpartFileName];
+    }
 
     if (counterpartFilePath)
     {
