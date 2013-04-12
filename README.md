@@ -11,7 +11,7 @@ The plugin should now be loaded into the plugin directory
 (`~/Library/Application Support/Developer/Shared/Xcode/Plug-ins`,
 for reference).
 
-## Useage
+## Usage
 
 Spectacular is designed to be triggered fron a keyboard shortcut. By default,
 it uses ⌘⌥^T, but you can override that inside the Keyboard pane in System
