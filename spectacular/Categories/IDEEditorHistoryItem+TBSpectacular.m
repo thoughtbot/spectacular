@@ -17,7 +17,7 @@
     NSString *activeFileName = [self _tb_baseFileName];
 
     if ([self tb_isSpecFile])
-        return [activeFileName stringByReplacingOccurrencesOfString:@"Spec" withString:@".m"];
+        return [activeFileName stringByReplacingOccurrencesOfString:@"Spec" withString:@".h"];
     else
         return [NSString stringWithFormat:@"%@Spec.m", activeFileName];
 }
