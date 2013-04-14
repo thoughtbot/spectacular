@@ -13,7 +13,7 @@ for reference).
 
 ## Usage
 
-Spectacular is designed to be triggered fron a keyboard shortcut. By default,
+Spectacular is designed to be triggered from a keyboard shortcut. By default,
 it uses ⌘⌥^T, but you can override that inside the Keyboard pane in System
 Preferences if you'd like.
 
@@ -35,4 +35,4 @@ The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
 ## License
 
-Liftoff is Copyright (c) 2012-2013 thoughtbot, inc. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+Spectacular is Copyright (c) 2012-2013 thoughtbot, inc. It is free software, and may be redistributed under the terms specified in the LICENSE file.
