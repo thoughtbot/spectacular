@@ -10,7 +10,18 @@
 
 @interface IDEEditorHistoryItem (TBSpectacular)
 
-- (NSString *)tb_counterpartName;
+/**
+ If YES is passed:
+    Foo => FooSpec
+    Foo+Bar => FooSpec
+    FooSpec => Foo
+
+ If NO is passed:
+    Foo => FooSpec
+    Foo+Bar => Foo+BarSpec
+    FooSpec => Foo
+ */
+- (NSString *)tb_counterpartName:(BOOL)ignoreCategory;
 - (BOOL)tb_isSpecFile;
 
 @end

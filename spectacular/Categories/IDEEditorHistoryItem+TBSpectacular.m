@@ -12,14 +12,18 @@
 
 #pragma mark - Public Methods
 
-- (NSString *)tb_counterpartName
+- (NSString *)tb_counterpartName:(BOOL)ignoreCategory
 {
     NSString *activeFileName = [self _tb_baseFileName];
 
     if ([self tb_isSpecFile])
         return [activeFileName stringByReplacingOccurrencesOfString:@"Spec" withString:@".m"];
-    else
-        return [NSString stringWithFormat:@"%@Spec.m", activeFileName];
+    else {
+      if (ignoreCategory)
+          activeFileName = [activeFileName componentsSeparatedByString:@"+"][0];
+
+      return [activeFileName stringByAppendingString:@"Spec.m"];
+    }
 }
 
 - (BOOL)tb_isSpecFile
